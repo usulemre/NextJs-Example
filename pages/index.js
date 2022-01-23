@@ -1,8 +1,8 @@
 import MeetupList from "../components/Meetup/MeetupList";
 import { MongoClient } from "mongodb";
 import { Fragment } from "react";
-import Head from 'next/head';
-function index(props) {
+import Head from "next/head";
+function HomePage(props) {
   return (
     <Fragment>
       <Head>
@@ -41,4 +41,4 @@ export async function getStaticProps() {
     revalidate: 1,
   };
 }
-export default index;
+export default HomePage;

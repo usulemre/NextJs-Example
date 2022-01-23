@@ -2,7 +2,7 @@ import MeetupForm from "../../components/Meetup/MeetupForm";
 import { useRouter } from 'next/router';
 import { Fragment } from "react";
 import Head from "next/head";
-function index() {
+function NewMeetupPage() {
   const router = useRouter();
   async function addMeetupHandler(enteredMeetupData) {
     const response = await fetch("/api/new-meetup", {
@@ -31,4 +31,4 @@ function index() {
   );
 }
 
-export default index;
+export default NewMeetupPage;
