@@ -1,3 +1,8 @@
+# Proje Image
+![alt text](https://github.com/usulemre/NextJs-Example/blob/main/public/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202022-01-23%20212653.png?raw=true)
+![alt text](https://github.com/usulemre/NextJs-Example/blob/main/public/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202022-01-23%20212911.png?raw=true)
+![alt text](https://github.com/usulemre/NextJs-Example/blob/main/public/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202022-01-23%20212535.png?raw=true)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
