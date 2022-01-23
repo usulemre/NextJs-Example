@@ -1,5 +1,7 @@
 import MeetupForm from "../../components/Meetup/MeetupForm";
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
+import { Fragment } from "react";
+import Head from "next/head";
 function index() {
   const router = useRouter();
   async function addMeetupHandler(enteredMeetupData) {
@@ -13,11 +15,20 @@ function index() {
 
     const data = await response.json();
 
-    console.log(data);
-
     router.push("/");
   }
-  return <MeetupForm onAdd={addMeetupHandler} />;
+  return (
+    <Fragment>
+      <Head>
+        <title>Add a New Meetup</title>
+        <meta
+          name="description"
+          content="Add your own meetups and create amazing networking opportunities."
+        />
+      </Head>
+      <MeetupForm onAdd={addMeetupHandler} />
+    </Fragment>
+  );
 }
 
 export default index;
