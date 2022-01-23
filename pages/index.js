@@ -1,25 +1,32 @@
 import MeetupList from "../components/Meetup/MeetupList";
+import { MongoClient } from "mongodb";
 
-const DUMY_DATA = [
-  {
-    id: "m1",
-    title: "emreeee",
-    image:
-      "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
-    address: "usullll",
-    description: "ankaraaaa",
-  },
-  {
-    id: "m2",
-    title: "emreeee",
-    image:
-      "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80",
-    address: "usullllllllllllllllllllllllllllllllllllll",
-    description: "ankaraaaa",
-  },
-];
-function index() {
-  return <MeetupList meetups={DUMY_DATA} />;
+function index(props) {
+  return <MeetupList meetups={props.meetups} />;
 }
 
+export async function getStaticProps() {
+  const client = await MongoClient.connect(
+    "mongodb+srv://emre:WEC2mocOonu4GOG3@cluster0.csjdc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  );
+  const db = client.db();
+
+  const meetupsCollection = db.collection("meetups");
+
+  const result = await meetupsCollection.find().toArray();
+
+  client.close();
+  return {
+    props: {
+      meetups: result.map((item) => ({
+        title: item.title,
+        image: item.image,
+        address: item.address,
+        description: item.description,
+        id:item._id.toString()
+      })),
+    },
+    revalidate: 1,
+  };
+}
 export default index;
