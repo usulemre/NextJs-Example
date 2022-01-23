@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../UI/Card";
 import classes from "./MeetupForm.module.css";
 import { useRef } from "react";
-function MeetupForm() {
+function MeetupForm(props) {
   const Title = useRef();
   const Image = useRef();
   const Address = useRef();

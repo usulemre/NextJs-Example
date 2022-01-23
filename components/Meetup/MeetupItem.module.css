@@ -1,0 +1,42 @@
+.item {
+  margin: 2rem auto;
+}
+.img {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.img img {
+  width: 100%;
+  object-fit: contain;
+}
+.content {
+  text-align: center;
+}
+.content h3 {
+  font-size: 1.25rem;
+  color: #2c292b;
+}
+.action {
+  text-align: center;
+}
+.action button {
+  border: none;
+  border: 2px solid rgb(65, 55, 65);
+  color: rgb(65, 55, 65);
+  padding: 10px 30px;
+  border-radius: 12px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+}
+.action button:hover {
+  border: none;
+  color: white;
+  border: 2px solid rgb(65, 55, 65);
+  background-color: rgb(65, 55, 65);
+}
