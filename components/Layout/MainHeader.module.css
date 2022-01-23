@@ -1,0 +1,32 @@
+.header {
+  background-color: rgb(65, 55, 65);
+  display: flex;
+  height: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  color: #fefefe;
+}
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+.header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style-type: none;
+}
+.header nav ul a {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 0;
+  color: rgb(214, 206, 206);
+}
+.header nav ul a:hover,
+.header nav ul a:active,
+.header nav ul a.active {
+  color: white;
+  padding: 5px o;
+  border-bottom: 3px solid white;
+}

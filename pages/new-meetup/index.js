@@ -1,7 +1,6 @@
 import MeetupForm from "../../components/Meetup/MeetupForm";
 
-
-const index = () => {
+function index(){
   return <MeetupForm />;
 };
 

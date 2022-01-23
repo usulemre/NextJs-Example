@@ -1,7 +1,7 @@
-import MeetupItem from '../../components/Meetup/MeetupItem';
+import MeetupItem from "../../components/Meetup/MeetupItem";
 
-const index = () => {
+function index() {
   return <MeetupItem />;
-};
+}
 
 export default index;

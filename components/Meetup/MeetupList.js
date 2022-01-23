@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const MeetupList = () => {
-  return <div>list</div>;
-};
+function MeetupList() {
+  return <div>aweaewae</div>;
+}
 
 export default MeetupList;
